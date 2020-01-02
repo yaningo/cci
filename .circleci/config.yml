@@ -18,6 +18,11 @@ jobs:
     steps:
       - checkout
 
+      # Install Java
+      
+      -run: sudo apt-get install default-jdk
+
+
       # Download and install Selenium
 
       - run:
@@ -27,7 +32,8 @@ jobs:
           name: Start Selenium
           command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
-          
+         
+
       # Run Test to ensure text is displyee after click
       
       - run: python clicktest.py
