@@ -9,7 +9,7 @@ path_index = os.path.join(dir_path, 'index.html')
 
 driver = webdriver.Firefox()
 caps = DesiredCapabilities.FIREFOX.copy()
-#caps['marionette'] = False
+caps['marionette'] = False
 driver=webdriver.Firefox(capabilities=caps)
 driver.get("file:///" + path_index)
 driver.execute_script("document.getElementById('clickety').click()")
