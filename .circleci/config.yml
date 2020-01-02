@@ -20,7 +20,7 @@ jobs:
 
         # Install Java
 
-      - run: sudo apt-get update && sudo apt-get install default-jdk
+      - run: sudo apt-get update && sudo apt-get install openjdk-8-jdk
 
 
         # Download and install Selenium
