@@ -18,6 +18,8 @@ jobs:
     steps:
       - checkout
 
+      - run: pip install --upgrade pip
+
       # Install Java
       
       - run: sudo apt-get update && sudo apt-get install default-jdk
