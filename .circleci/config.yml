@@ -19,7 +19,7 @@ jobs:
       - checkout
         # Install Java
 
-      -run: sudo apt-get install default-jdk
+      - run: sudo apt-get install default-jdk
 
 
         # Download and install Selenium
