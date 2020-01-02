@@ -20,11 +20,11 @@ jobs:
 
       # Install pip
 
-      - run: pip install --upgrade pip
+      - run: sudo pip install --upgrade pip
 
       # Install Python bindings
       
-      - run: pip install -U selenium         
+      - run: sudo pip install -U selenium         
 
       # Run Test to ensure text is displayed after click
       
