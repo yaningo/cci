@@ -7,7 +7,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 dir_path = os.path.dirname(os.path.realpath(__file__))
 path_index = os.path.join(dir_path, 'index.html')
 
-driver = webdriver.Firefox()
+#driver = webdriver.Firefox()
 caps = DesiredCapabilities.FIREFOX.copy()
 caps['marionette'] = False
 driver=webdriver.Firefox(capabilities=caps)
