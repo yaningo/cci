@@ -25,6 +25,12 @@ jobs:
       # Install Python bindings
       
       - run: sudo pip install -U selenium         
+        
+      # Install Geckodriver in /usr/local/bin
+      
+      -run:
+          sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
+          sudo tar -xzf geckodriver-v0.26.0-linux64.tar.gz -C /usr/local/bin
 
       # Run Test to ensure text is displayed after click
       
