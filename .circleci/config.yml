@@ -17,6 +17,10 @@ jobs:
 
     steps:
       - checkout
+        # Install Java
+
+      -run: sudo apt-get install default-jdk
+
 
         # Download and install Selenium
 
@@ -27,6 +31,7 @@ jobs:
           name: Start Selenium
           command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
+
 
       # Install pip
 
