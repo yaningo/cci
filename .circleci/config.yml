@@ -19,3 +19,17 @@ jobs:
     steps:
       - checkout
       - run: echo "Deploy complete"
+
+workflows:
+  version: 2.1
+  build-test-and-deploy:
+    jobs:
+      - build:
+          
+      - test:
+          requires:
+            - build
+   
+      - deploy:
+          requires:
+            - test
