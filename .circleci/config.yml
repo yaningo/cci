@@ -7,15 +7,3 @@ jobs:
     steps:
       - checkout
       - run: echo "Building complete"
-  test:
-    docker:
-      - image: circleci/node
-    steps:
-      - checkout
-      - run: echo "Testing complete"
-  deploy:
-    docker:
-      - image: circleci/node
-    steps:
-      - checkout
-      - run: echo "Deploy complete"
