@@ -1,8 +1,11 @@
 version: 2
 
+parameters:
+  IGNORE_UNIT_TEST:
+    type: boolean
 jobs:
   build:
     docker:
       - image: circleci/node
     steps:
-      - run: echo $IGNORE_UNIT_TEST
+      - run: echo << pipeline.parameters.IGNORE_UNIT_TEST >>
