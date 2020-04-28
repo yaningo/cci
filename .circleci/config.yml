@@ -1,7 +1,7 @@
 version: 2.1
 
 parameters:
-  IGNORE_UNIT_TEST:
+  deploy_prod:
     type: boolean
     default: false
     
@@ -10,4 +10,4 @@ jobs:
     docker:
       - image: circleci/node
     steps:
-      - run: echo << pipeline.parameters.IGNORE_UNIT_TEST >>
+      - run: echo << pipeline.parameters.deploy_prod >>
