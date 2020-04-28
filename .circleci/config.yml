@@ -3,6 +3,8 @@ version: 2.1
 parameters:
   IGNORE_UNIT_TEST:
     type: boolean
+    default: false
+    
 jobs:
   build:
     docker:
