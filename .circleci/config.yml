@@ -29,11 +29,13 @@ workflows:
   version: 2
   daily:
     jobs:
-      - premier
+      - premier:
+          context: chef-org      
 
   sync:
     jobs:
-      - deuxieme
+      - deuxieme:
+          context: chef-org
       
   thirdly:
     jobs:
