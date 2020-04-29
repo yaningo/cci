@@ -15,7 +15,7 @@ jobs:
     steps:
       - run:
           command: |
-                   echo jobnum2
+                   echo job2
  
   troisieme:
     docker:
