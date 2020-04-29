@@ -1,13 +1,41 @@
-version: 2.1
+version: 2
 
-parameters:
-  IGNORE_UNIT_TEST:
-    type: boolean
-    default: false
-    
 jobs:
-  build:
+  premier:
     docker:
       - image: circleci/node
     steps:
-      - run: echo << pipeline.parameters.IGNORE_UNIT_TEST >>
+      - run:
+          command: |
+                   echo jobnum1
+                   
+  deuxieme:
+    docker:
+      - image: circleci/node
+    steps:
+      - run:
+          command: |
+                   echo jobnum2
+ 
+  troisieme:
+    docker:
+      - image: circleci/node
+    steps:
+      - run:
+          command: |
+                   echo jobnum3
+                                     
+workflows:
+  version: 2
+  daily:
+    jobs:
+      - premier
+
+  sync:
+    jobs:
+      - deuxieme
+      
+  thirdly:
+    jobs:
+      - troisieme:
+          context: chef-org
