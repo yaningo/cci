@@ -5,38 +5,12 @@ jobs:
     docker:
       - image: circleci/node
     steps:
-      - run:
-          command: |
-                   echo job1
-                   
-  deuxieme:
-    docker:
-      - image: circleci/node
-    steps:
-      - run:
-          command: |
-                   echo job2
- 
-  troisieme:
-    docker:
-      - image: circleci/node
-    steps:
-      - run:
-          command: |
-                   echo jobnum3
+      - checkout
+      - store_artifacts:
+          path: index.html
+          destination: index.html
                                      
 workflows:
-  version: 2
-  daily:
+  wkfw:
     jobs:
-      - premier:
-          context: chef-org      
-  sync:
-    jobs:
-      - deuxieme:
-          context: chef-org
-      
-  thirdly:
-    jobs:
-      - troisieme:
-          context: chef-org
+      - premier
