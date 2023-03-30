@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  premier:
+  prems:
     docker:
       - image: circleci/node
     steps:
@@ -13,4 +13,4 @@ jobs:
 workflows:
   wkfw:
     jobs:
-      - premier
+      - prems
